@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "tb_item_produto",uniqueConstraints = @UniqueConstraint(columnNames = {"id_venda","id_produto"}))
+@Table(name = "tb_item_vendas",uniqueConstraints = @UniqueConstraint(columnNames = {"id_venda","id_produto"}))
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -12,13 +12,16 @@ import lombok.*;
 @Builder
 public class ItemVenda {
 
+    @Id
+    private Long id;
+
     @ManyToOne
     @JoinColumn(name = "id_venda")
-    private Long idVenda;
+    private Venda venda;
 
     @OneToOne
     @JoinColumn(name = "id_produto")
-    private Long idProduto;
+    private Produto produto;
 
     private int quantidade;
 

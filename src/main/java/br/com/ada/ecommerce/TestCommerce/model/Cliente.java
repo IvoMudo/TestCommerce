@@ -22,8 +22,7 @@ public class Cliente {
     @Column(nullable = false,unique = true)
     private String email;
 
-    @OneToOne(mappedBy = "cliente",cascade = CascadeType.ALL)
-    @JoinColumn(name = "carrinho_id",referencedColumnName = "id")
+    @OneToOne(mappedBy = "cliente")
     private Carrinho carrinho;
 
 }

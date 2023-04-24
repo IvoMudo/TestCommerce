@@ -19,10 +19,11 @@ public class Carrinho {
     private Long id;
 
     @OneToOne
-    @JoinColumn(name = "id_cliente")
+    @JoinColumn(name = "id_cliente", referencedColumnName = "id")
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "id_carrinho", cascade = CascadeType.ALL)
-    private List<ItemProduto> itemProduto;
+    @OneToMany
+    @JoinColumn(name = "id_produto")
+    private List<ItemProduto> itemProdutos;
 }
 

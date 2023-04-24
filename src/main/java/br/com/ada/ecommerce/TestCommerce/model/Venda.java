@@ -23,6 +23,6 @@ public class Venda {
 
     private boolean foiEntregue;
 
-    @OneToMany(mappedBy = "id_venda",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "venda",cascade = CascadeType.ALL)
     private List<ItemVenda> itemVendas;
 }

@@ -12,13 +12,16 @@ import lombok.*;
 @Builder
 public class ItemProduto {
 
+    @Id
+    private Long id;
+
     @ManyToOne
     @JoinColumn(name = "id_carrinho")
-    private Long idCarrinho;
+    private Carrinho carrinho;
 
     @OneToOne
     @JoinColumn(name = "id_produto")
-    private Long idProduto;
+    private Produto produto;
 
     private int quantidade;
 
