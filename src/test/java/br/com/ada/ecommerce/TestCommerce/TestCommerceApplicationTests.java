@@ -1,4 +1,4 @@
-package br.com.ada.ecommerce.testCommerce;
+package br.com.ada.ecommerce.TestCommerce;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package br.com.ada.ecommerce.testCommerce;
+package br.com.ada.ecommerce.TestCommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
