@@ -1,24 +1,6 @@
-## Web-api
-Repository
-- [x] Venda
-- [x] ItemProduto
-- [x] ItemVenda
-- [x] Produto
-- [x] Carrinho
-- [x] Cliente
-
-Model
-- [x] Venda
-- [x] ItemProduto
-- [x] ItemVenda
-- [x] Produto
-- [x] Carrinho
-- [x] Cliente
-
-
 ## To-do entrega
 Adicionar um produto ao carrinho de compras
-- [ ] O cliente adiciona um produto ao carrinho de compras
+- [x] O cliente adiciona um produto ao carrinho de compras
 - [ ] O sistema atualiza o valor total do carrinho de compras
 
 Finalizar uma venda

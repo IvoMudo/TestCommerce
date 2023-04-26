@@ -15,11 +15,11 @@ public class ItemVenda {
     @Id
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_venda")
     private Venda venda;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_produto")
     private Produto produto;
 

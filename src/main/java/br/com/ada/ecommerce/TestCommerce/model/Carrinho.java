@@ -1,9 +1,10 @@
 package br.com.ada.ecommerce.TestCommerce.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_carrinhos")
@@ -18,12 +19,14 @@ public class Carrinho {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
-    @JoinColumn(name = "id_cliente", referencedColumnName = "id")
-    private Cliente cliente;
+    @JsonManagedReference
+    @OneToMany(mappedBy = "carrinho",cascade = CascadeType.ALL)
+    private Set<ItemProduto> itemProdutos;
 
-    @OneToMany
-    @JoinColumn(name = "id_produto")
-    private List<ItemProduto> itemProdutos;
+    private double valorTotal;
+
+    public void adicionarProduto(ItemProduto itemProduto){
+        itemProdutos.add(itemProduto);
+    }
 }
 

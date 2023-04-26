@@ -18,7 +18,7 @@ public class Produto {
 
     private String nome;
 
-    private String valor;
+    private double valor;
 
     private String descricao;
 }

@@ -10,6 +10,7 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
+@ToString
 public class Cliente {
 
     @Id
@@ -22,7 +23,8 @@ public class Cliente {
     @Column(nullable = false,unique = true)
     private String email;
 
-    @OneToOne(mappedBy = "cliente")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_cliente", referencedColumnName = "id")
     private Carrinho carrinho;
 
 }
